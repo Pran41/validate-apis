@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate APIs</title>
+
+</head>
+<body>
+       <p>PLZ enter a number or click OK!</p>
+    <input id="id1" type="number" min="100" max="300" required>
+    <button oneclick="myFunction()">OK</button>
+    <p>If the number is less than 100 or greater than 300, an error message will be displayed.</p>
+    <p id="results"></p>
+    
+    <script>
+        function myFunction() {
+            var x = document.getElementById("id1");
+            if (!x.checkValidity()) {
+                document.getElementById("results").innerHTML = x.validationmessage;
+            }
+
+            else {
+                document.getElementById("results").innerHTML = "Input OK";
+            }
+        }
+    </script>
+     
+</body>
+</html>
